@@ -1,0 +1,50 @@
+addcurrency GBP £ 1.10
+loadcsv amazon_co-ecommerce_sample.csv
+listproducts
+addcurrency YEN ¥ 0.08
+setstorecurrency YEN
+addiscount FIXED 2 "Sale!"
+applydiscount FIXED 2
+savecsv 2YENSale.csv
+getstorecurrency
+showproduct ad4727068c1de106b04c4f6408ced53a
+showproduct 9e300b77bb4a341199401c4316d93391
+listmanufacturers
+listproductsbymanufacturarer Oostifun
+listproductsbymanufacturarer Amscan
+addiscount PERCENTAGE 25 "OMG! 25% SALE!!!!"
+addiscount PERCENTAGE 10 "Spring sales"
+addiscount PERCENTAGE 40 "NONE"
+savestore
+applydiscount PERCENTAGE 10
+savecsv Discount1.csv
+applydiscount PERCENTAGE 25
+savecsv Discount2.csv
+applydiscount PERCENTAGE 40
+savecsv Discount3.csv
+listproducts
+loadstore
+showproduct ad4727068c1de106b04c4f6408ced53a
+showproduct 9e300b77bb4a341199401c4316d93391
+listdiscounts
+addcurrency LEU LEU 0.21
+setstorecurrency LEU
+getstorecurrency
+listproducts
+savecsv Romania.csv
+applydiscount PERCENTAGE 25
+savecsv RomaniaV2.csv
+savestore
+applydiscount PERCENTAGE 10
+savecsv RomaniaV3.csv
+loadstore
+listproducts
+showproduct ad4727068c1de106b04c4f6408ced53a
+showproduct 9e300b77bb4a341199401c4316d93391
+calculatetotal ad4727068c1de106b04c4f6408ced53a 9e300b77bb4a341199401c4316d93391
+listcurrencies
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f 02eb08b348d76401e18bf44e18cb3007 339482bafe89b2d21ff2eb6de1fb6389
+addcurrency KoreanWon ₩ 0.02
+setstorecurrency KoreanWon
+savecsv BackToKorea.csv
+exit

@@ -1,0 +1,20 @@
+addcurrency GBP £ 1.10
+addcurrency KoreanWon ₩ 0.02
+setstorecurrency KoreanWon
+loadcsv amazon_co-ecommerce_sample.csv
+listproducts
+savecsv Korean.csv
+setstorecurrency EUR
+updateparity KoreanWon 0.03
+setstorecurrency KoreanWon
+savecsv KoreanV2.csv
+listmanufacturers
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f 02eb08b348d76401e18bf44e18cb3007 339482bafe89b2d21ff2eb6de1fb6389
+addiscount FIXED 0.5 "-0.5"
+applydiscount FIXED 0.5
+setstorecurrency GBP
+listproducts
+savecsv Import.csv
+addcurrency LEU LEU 0.21
+listcurrencies
+exit

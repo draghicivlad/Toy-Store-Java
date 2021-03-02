@@ -1,0 +1,15 @@
+loadcsv amazon_co-ecommerce_sample.csv
+addcurrency GBP £ 1.10
+listcurrencies
+loadcsv amazon_co-ecommerce_sample.csv
+listproducts
+addiscount PERCENTAGE 45 "45% Extreme Sale!!!"
+savestore
+applydiscount PERCENTAGE 45
+listproducts
+savecsv promo1.csv
+loadstore
+addiscount PERCENTAGE 10 "Summer Sale"
+applydiscount PERCENTAGE 10
+savecsv promo2.csv
+exit

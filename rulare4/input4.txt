@@ -1,0 +1,30 @@
+addcurrency GBP £ 1.10
+addcurrency YEN ¥ 0.08
+addcurrency RUBLA руб 0.10
+loadcsv amazon_co-ecommerce_sample.csv
+listcurrencies
+listproducts
+setstorecurrency YEN
+savecsv yenCurrency.csv
+setstorecurrency RUBLA
+savecsv rublaCurrency.csv
+setstorecurrency YEN
+showproduct d19c9fca1b537ed5bfe6f3ddd1ecd4fb
+showproduct 5a97ddefcd3ba7023ca85605db439eda
+listproductsbymanufacturarer Disney
+addiscount PERCENTAGE 20 "20% Christmas"
+addiscount PERCENTAGE 15 "Halloween Promo"
+listdiscounts
+savestore
+applydiscount PERCENTAGE 20
+listproducts
+savecsv christmas.csv
+applydiscount PERCENTAGE 15
+listproducts
+savecsv allPromos.csv
+loadstore
+listproducts
+savecsv undo.csv
+calculatetotal aedf496c4f0594f1814f301db907ffad 78144970e292f76830076d5625f7d96a 832d6cfda1aa60b5b8684edcfeb22ecb
+applydiscount PERCENTAGE 12
+exit
